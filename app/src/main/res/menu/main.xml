@@ -1,0 +1,90 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+    <item android:id="@+id/action_startStop"
+          android:icon="@drawable/ic_action_play"
+          android:title="@string/action_start"
+          android:orderInCategory="1"
+          app:showAsAction="always" />
+    <item android:id="@+id/action_setDemodulation"
+          android:icon="@drawable/ic_action_demod_off"
+          android:title="@string/action_demodulation_off"
+<<<<<<< HEAD
+          android:orderInCategory="2"
+          app:showAsAction="never" />
+    <item android:id="@+id/action_setFrequency"
+          android:icon="@drawable/ic_action_frequency"
+          android:title="@string/action_setFrequency"
+          android:orderInCategory="3"
+=======
+          android:orderInCategory="3"
+          app:showAsAction="always" />
+    <item android:id="@+id/action_setFrequency"
+          android:icon="@drawable/ic_action_frequency"
+          android:title="@string/action_setFrequency"
+          android:orderInCategory="4"
+>>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
+          app:showAsAction="always" />
+    <item android:id="@+id/action_setGain"
+          android:icon="@drawable/ic_action_gain"
+          android:title="@string/action_setGain"
+<<<<<<< HEAD
+          android:orderInCategory="4"
+          app:showAsAction="never" />
+    <item android:id="@+id/action_record"
+          android:icon="@drawable/ic_action_record_off"
+          android:title="@string/action_recordOff"
+          android:orderInCategory="5"
+=======
+          android:orderInCategory="10"
+          app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_record"
+          android:icon="@drawable/ic_action_record_off"
+          android:title="@string/action_recordOff"
+          android:orderInCategory="15"
+>>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
+          app:showAsAction="always" />
+    <item android:id="@+id/action_bookmarks"
+          android:icon="@drawable/ic_action_important"
+          android:title="@string/action_bookmarks"
+<<<<<<< HEAD
+          android:orderInCategory="6"
+=======
+          android:orderInCategory="16"
+>>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
+          app:showAsAction="always" />
+    <item android:id="@+id/action_autoscale"
+          android:icon="@drawable/ic_action_full_screen"
+          android:title="@string/action_autoscale"
+<<<<<<< HEAD
+          android:orderInCategory="7"
+          app:showAsAction="never" />
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="8"
+          app:showAsAction="never" />
+    <item android:id="@+id/action_help"
+          android:title="@string/action_help"
+          android:orderInCategory="9"
+          app:showAsAction="never" />
+    <item android:id="@+id/action_info"
+          android:title="@string/action_info"
+          android:orderInCategory="10"
+=======
+          android:orderInCategory="20"
+          app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+          app:showAsAction="never" />
+    <item android:id="@+id/action_help"
+          android:title="@string/action_help"
+          android:orderInCategory="101"
+          app:showAsAction="never" />
+    <item android:id="@+id/action_info"
+          android:title="@string/action_info"
+          android:orderInCategory="102"
+>>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
+          app:showAsAction="never" />
+</menu>

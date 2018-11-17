@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<module external.linked.project.id=":hackrf_android" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+=======
+<module external.linked.project.id=":hackrf_android" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$USER_HOME$/PC_Programmieren/Android/RFAnalyzer" external.system.id="GRADLE" version="4">
+>>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":hackrf_android" />
+      </configuration>
+    </facet>
+    <facet type="java-gradle" name="Java-Gradle">
+      <configuration>
+        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />
+        <option name="BUILDABLE" value="false" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+    </content>
+<<<<<<< HEAD
+    <orderEntry type="inheritedJdk" />
+=======
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+>>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

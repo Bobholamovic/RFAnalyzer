@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">频谱分析器</string>
+    <string name="action_settings">设置</string>
+    <string name="action_help">帮助</string>
+    <string name="action_info">关于信息</string>
+    <string name="action_start">开始</string>
+    <string name="action_stop">停止</string>
+    <string name="action_demodulation_off">关闭解调</string>
+    <string name="action_demodulation_am">AM解调</string>
+    <string name="action_demodulation_nfm">窄带FM解调</string>
+    <string name="action_demodulation_wfm">宽带FM解调</string>
+    <string name="action_demodulation_lsb">LSB解调</string>
+    <string name="action_demodulation_usb">USB解调</string>
+    <string name="action_setFrequency">频率设置</string>
+    <string name="action_setGain">增益设置</string>
+    <string name="action_recordOff">开始记录</string>
+    <string name="action_recordOn">停止记录</string>
+    <string name="action_bookmarks">书签</string>
+    <string name="action_autoscale">自动比例</string>
+    <string name="help_url">https://github.com/demantz/RFAnalyzer/blob/master/doc/rf_analyzer_manual.md</string>
+    <string name="hackrf_vga_gain_label">VGA增益:</string>
+    <string name="hackrf_lna_gain_label">LNA增益:</string>
+    <string name="rtlsdr_manual_gain_label">手动增益:</string>
+    <string name="rtlsdr_agc_label">AGC:</string>
+    <string name="rtlsdr_gain_label">增益:</string>
+    <string name="rtlsdr_ifgain_label">IF增益:</string>
+    <string name="filesource_doesnt_support_gain">该SDR源不支持调整增益！</string>
+    <string name="rtl2832u_is_not_installed">RTL2832U 驱动未被正确安装</string>
+    <string name="warning_recording_is_running">警告：正在记录中！</string>
+    <string name="tuneToFrequency_setFrequencyRange">设置带宽：</string>
+    <string name="recording_filename">SDR源名称：</string>
+    <string name="recording_frequency">中心频率（Hz或MHz）：</string>
+    <string name="recording_sampleRate">采样率：</string>
+    <string name="recording_fixedSampleRateHint">解调过程中不可修改采样率！</string>
+    <string name="recording_stopAfter">停止条件：</string>
+    <string name="save_state_running">保存运行状态</string>
+    <string name="save_state_demodulatorMode">保存解调模式</string>
+    <string name="save_state_channelFrequency">保存通道频率</string>
+    <string name="save_state_channelWidth">保存通道带宽</string>
+    <string name="save_state_squelch">保存静噪状态</string>
+    <string name="save_state_virtualFrequency">保存虚拟频率</string>
+    <string name="save_state_virtualSampleRate">保存虚拟采样率</string>
+    <string name="save_state_minDB">保存最小dB</string>
+    <string name="save_state_maxDB">保存最大dB</string>
+    <string name="pref_frequency">pref_frequency</string>
+    <string name="pref_sampleRate">pref_sampleRate</string>
+    <string name="pref_tune_to_frequency_unit">pref_tune_to_frequency_unit</string>
+    <string name="pref_tune_to_frequency_setBandwidth">pref_tune_to_frequency_setBandwidth</string>
+    <string name="pref_tune_to_frequency_bandwidth">pref_tune_to_frequency_bandwidth</string>
+    <string name="pref_tune_to_frequency_bandwidthUnit">pref_tune_to_frequency_bandwidthUnit</string>
+    <string name="pref_recordingSampleRate">pref_recordingSampleRate</string>
+    <string name="pref_recordingStopAfterEnabled">pref_recordingStopAfterEnabled</string>
+    <string name="pref_recordingStopAfterValue">pref_recordingStopAfterValue</string>
+    <string name="pref_recordingStopAfterUnit">pref_recordingStopAfterUnit</string>
+    <string name="pref_hackrf_vgaRxGain">pref_hackrf_vgaRxGain</string>
+    <string name="pref_hackrf_lnaGain">pref_hackrf_lnaGain</string>
+    <string name="pref_rtlsdr_manual_gain">pref_rtlsdr_manual_gain</string>
+    <string name="pref_rtlsdr_agc">pref_rtlsdr_agc</string>
+    <string name="pref_rtlsdr_gain">pref_rtlsdr_gain</string>
+    <string name="pref_rtlsdr_ifGain">pref_rtlsdr_ifGain</string>
+    <string name="pref_signalProcessing_category">pref_signalProcessing_category</string>
+    <string name="pref_signalProcessing_category_title">信号处理</string>
+    <string name="pref_sourceType">pref_sourceType</string>
+    <string name="pref_sourceType_title">SDR源类型</string>
+    <string name="pref_sourceType_default">1</string>
+    <string name="pref_sourceType_summ">SDR源设置为：%s</string>
+    <string name="pref_sourceSettings">pref_sourceSettings</string>
+    <string name="pref_sourceSettings_title">SDR源设置</string>
+    <string name="pref_filesource_category">pref_filesource_category</string>
+    <string name="pref_filesource_category_title">文件源设置</string>
+    <string name="pref_filesource_frequency">pref_filesource_frequency</string>
+    <string name="pref_filesource_frequency_title">文件源：频率(Hz)</string>
+    <string name="pref_filesource_frequency_summ">记录文件的基带频率为：%s Hz</string>
+    <string name="pref_filesource_frequency_default">97000000</string>
+    <string name="pref_filesource_sampleRate">pref_filesource_sampleRate</string>
+    <string name="pref_filesource_sampleRate_title">文件源：采样率(Sps)</string>
+    <string name="pref_filesource_sampleRate_summ">记录文件的采样率为：%s Sps</string>
+    <string name="pref_filesource_sampleRate_default">2000000</string>
+    <string name="pref_filesource_file">pref_filesource_file</string>
+    <string name="pref_filesource_file_title">源文件</string>
+    <string name="pref_filesource_file_summ">文件路径：%s</string>
+    <string name="pref_filesource_file_default">Test_Hackrf/hackrf_android.iq</string>
+    <string name="pref_filesource_format">pref_filesource_format</string>
+    <string name="pref_filesource_format_title">文件格式：</string>
+    <string name="pref_filesource_format_default">0</string>
+    <string name="pref_filesource_format_summ">文件格式设置为：%s</string>
+    <string name="pref_filesource_repeat">pref_filesource_repeat</string>
+    <string name="pref_filesource_repeat_title">重复</string>
+    <string name="pref_filesource_repeat_summ_on">循环播放</string>
+    <string name="pref_filesource_repeat_summ_off">播放一遍</string>
+    <string name="pref_hackrf_category">pref_hackrf_category</string>
+    <string name="pref_hackrf_category_title">HackRF设置</string>
+    <string name="pref_hackrf_amplifier">pref_hackrf_amplifier</string>
+    <string name="pref_hackrf_amplifier_title">RF放大器</string>
+    <string name="pref_hackrf_amplifier_summ_on">RF放大器已开启</string>
+    <string name="pref_hackrf_amplifier_summ_off">RF放大器已关闭</string>
+    <string name="pref_hackrf_antennaPower">pref_hackrf_antennaPower</string>
+    <string name="pref_hackrf_antennaPower_title">天线功率</string>
+    <string name="pref_hackrf_antennaPower_summ_on">天线功率已开启</string>
+    <string name="pref_hackrf_antennaPower_summ_off">天线功率已关闭</string>
+    <string name="pref_hackrf_frequencyOffset">pref_hackrf_frequencyOffset</string>
+    <string name="pref_hackrf_frequencyOffset_title">上/下转换器频率偏移(Hz)</string>
+    <string name="pref_hackrf_frequencyOffset_summ">频偏设置为：%s Hz</string>
+    <string name="pref_rtlsdr_category">pref_rtlsdr_category</string>
+    <string name="pref_rtlsdr_category_title">RTL-SDR设置</string>
+    <string name="pref_rtlsdr_externalServer">pref_rtlsdr_externalServer</string>
+    <string name="pref_rtlsdr_externalServer_title">使用外部rtl_tcp服务器</string>
+    <string name="pref_rtlsdr_externalServer_summ_on">使用外部服务器</string>
+    <string name="pref_rtlsdr_externalServer_summ_off">使用本地设备</string>
+    <string name="pref_rtlsdr_ip">pref_rtlsdr_ip</string>
+    <string name="pref_rtlsdr_ip_title">IP地址</string>
+    <string name="pref_rtlsdr_ip_summ">rtl_tcp服务器的IP地址为：%s</string>
+    <string name="pref_rtlsdr_ip_default">192.168.0.100</string>
+    <string name="pref_rtlsdr_port">pref_rtlsdr_port</string>
+    <string name="pref_rtlsdr_port_title">TCP端口</string>
+    <string name="pref_rtlsdr_port_summ">rtl_tcp的TCP端口为：%s</string>
+    <string name="pref_rtlsdr_port_default">1234</string>
+    <string name="pref_rtlsdr_frequencyCorrection">pref_rtlsdr_frequencyCorrection</string>
+    <string name="pref_rtlsdr_frequencyCorrection_title">频率纠正(ppm)</string>
+    <string name="pref_rtlsdr_frequencyCorrection_summ">频率纠正设置为：%s ppm</string>
+    <string name="pref_rtlsdr_frequencyCorrection_default">0</string>
+    <string name="pref_rtlsdr_frequencyOffset">pref_rtlsdr_frequencyOffset</string>
+    <string name="pref_rtlsdr_frequencyOffset_title">上/下转换器频率偏移(Hz)</string>
+    <string name="pref_rtlsdr_frequencyOffset_summ">频率偏移设置为：%s Hz</string>
+    <string name="pref_fftSize">pref_fftSize</string>
+    <string name="pref_fftSize_title">FFT尺寸</string>
+    <string name="pref_fftSize_default">4096</string>
+    <string name="pref_fftSize_summ">FFT尺寸设置为：%s</string>
+    <string name="pref_averaging">pref_averaging</string>
+    <string name="pref_averaging_title">平均化</string>
+    <string name="pref_averaging_default">0</string>
+    <string name="pref_averaging_summ">平均化设置为：%s</string>
+    <string name="pref_peakHold">pref_peakHold</string>
+    <string name="pref_peakHold_title">峰值保持</string>
+    <string name="pref_peakHold_summ_on">已启用峰值保持</string>
+    <string name="pref_peakHold_summ_off">已禁用峰值保持</string>
+    <string name="pref_autostart">pref_autostart</string>
+    <string name="pref_autostart_title">自动开始</string>
+    <string name="pref_autostart_summ_on">程序启动时自动开始FFT</string>
+    <string name="pref_autostart_summ_off">手动开始FFT</string>
+    <string name="pref_view_category">pref_view_category</string>
+    <string name="pref_view_category_title">视图</string>
+    <string name="pref_colorMapType">pref_colorMapType</string>
+    <string name="pref_colorMapType_title">颜色映射类型</string>
+    <string name="pref_colorMapType_default">4</string>
+    <string name="pref_colorMapType_summ">颜色映射类型设置为：%s</string>
+    <string name="pref_fftDrawingType">pref_fftDrawingType</string>
+    <string name="pref_fftDrawingType_title">FFT绘图类型</string>
+    <string name="pref_fftDrawingType_default">2</string>
+    <string name="pref_fftDrawingType_summ">FFT绘图类型设置为：%s</string>
+    <string name="pref_screenOrientation">pref_screenOrientation</string>
+    <string name="pref_screenOrientation_title">屏幕方向</string>
+    <string name="pref_screenOrientation_default">自动</string>
+    <string name="pref_screenOrientation_summ">屏幕方向设置为：%s</string>
+    <string name="pref_spectrumWaterfallRatio">pref_spectrumWaterfallRatio</string>
+    <string name="pref_spectrumWaterfallRatio_title">频谱图/瀑布图比例</string>
+    <string name="pref_spectrumWaterfallRatio_default">0.5</string>
+    <string name="pref_spectrumWaterfallRatio_summ">比例设置为：%s</string>
+    <string name="pref_zoomDB">pref_zoomDB</string>
+    <string name="pref_zoomDB_title">纵向双指缩放</string>
+    <string name="pref_zoomDB_summ_on">已启用纵向双指缩放</string>
+    <string name="pref_zoomDB_summ_off">已禁用纵向双指缩放</string>
+    <string name="pref_scrollDB">pref_scrollDB</string>
+    <string name="pref_scrollDB_title">纵向滚动</string>
+    <string name="pref_scrollDB_summ_on">已启用纵向滚动</string>
+    <string name="pref_scrollDB_summ_off">已禁用纵向滚动</string>
+    <string name="pref_decoupledAxis">pref_decoupledAxis</string>
+    <string name="pref_decoupledAxis_title">分离横向/纵向缩放/滚动</string>
+    <string name="pref_decoupledAxis_summ_on">仅在左侧区域纵向缩放/滚动</string>
+    <string name="pref_decoupledAxis_summ_off">在任意位置纵向缩放/滚动</string>
+    <string name="pref_relativeFrequencies">pref_relativeFrequencies</string>
+    <string name="pref_relativeFrequencies_title">相对频率</string>
+    <string name="pref_relativeFrequencies_summ_on">显示相对中心频率的偏移</string>
+    <string name="pref_relativeFrequencies_summ_off">显示频率绝对大小</string>
+    <string name="pref_advancedSettings">pref_advancedSettings</string>
+    <string name="pref_advancedSettings_title">高级</string>
+    <string name="pref_fontSize">pref_fontSize</string>
+    <string name="pref_fontSize_title">文字大小</string>
+    <string name="pref_fontSize_default">2</string>
+    <string name="pref_fontSize_summ">文字大小设置为：%s</string>
+    <string name="pref_showDebugInformation">pref_showDebugInformation</string>
+    <string name="pref_showDebugInformation_title">调试信息</string>
+    <string name="pref_showDebugInformation_summ_on">显示调试信息</string>
+    <string name="pref_showDebugInformation_summ_off">隐藏调试信息</string>
+    <string name="pref_dynamicFrameRate">pref_dynamicFrameRate</string>
+    <string name="pref_dynamicFrameRate_title">动态帧率</string>
+    <string name="pref_dynamicFrameRate_summ_on">帧率根据负载动态调整</string>
+    <string name="pref_dynamicFrameRate_summ_off">帧率固定</string>
+    <string name="pref_frameRate">pref_frameRate</string>
+    <string name="pref_frameRate_title">帧率</string>
+    <string name="pref_frameRate_default">10</string>
+    <string name="pref_frameRate_summ">帧率设置为：%s</string>
+    <string name="pref_logging">pref_logging</string>
+    <string name="pref_logging_title">日志</string>
+    <string name="pref_logging_summ_on">已启用日志</string>
+    <string name="pref_logging_summ_off">已禁用日志</string>
+    <string name="pref_showLog">pref_showLog</string>
+    <string name="pref_showLog_title">查看日志</string>
+    <string name="pref_logfile">pref_logfile</string>
+    <string name="pref_logfile_title">日志文件</string>
+    <string name="pref_logfile_summ">文件路径：%s</string>
+    <string name="pref_logfile_default">RFAnalyzer/log.txt</string>
+    <string name="bookmarks_addBookmark">新建书签</string>
+    <string name="bookmarks_addCategory">新建类别</string>
+    <string name="editBookmark_name">书签名称: </string>
+    <string name="editBookmark_category">类别: </string>
+    <string name="editBookmark_frequency">频率: </string>
+    <string name="editBookmark_channelWidth">带宽: </string>
+    <string name="editBookmark_mode">模式: </string>
+    <string name="editBookmark_squelch">静噪: </string>
+    <string name="editBookmark_comment">备注: </string>
+    <string name="editBookmarkCategory_name">名称: </string>
+    <string name="editBookmarkCategory_description">描述: </string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="info_title"><![CDATA[<h1>RF Analyzer %s</h1>]]></string>
+    <string name="info_msg_body"><![CDATA[
+Copyright &#169; 2016 Dennis Mantz<br /><br />
+
+<h1>About the App</h1>
+RF Analyzer is an open source spectrum analyzer that lets you use you
+SDR hardware together with an Android device. A detailed description
+can be found in the <a href=https://github.com/demantz/RFAnalyzer/blob/master/doc/rf_analyzer_manual.md>
+manual</a>.
+
+Show the <a href=https://raw.githubusercontent.com/demantz/RFAnalyzer/master/changelog.txt>
+changelog</a>.
+
+<h1>Get Beta Releases</h1>
+If you want to help the developer by testing beta releases you can
+join the beta program on Google Play:<br />
+<a href=https://play.google.com/apps/testing/com.mantz_it.rfanalyzer>
+https://play.google.com/apps/testing/com.mantz_it.rfanalyzer</a>
+
+<h1>Reporting Bugs</h1>
+If you find any bugs or translation mistakes or if you want to request
+a new feature please use the GitHub page of the project:<br />
+<a href=https://github.com/demantz/RFAnalyzer/issues>
+https://github.com/demantz/RFAnalyzer/issues</a>
+<br /><br />
+Alternatively you could write me an email to
+<a href=mailto:dennis.mantz@googlemail.com>dennis.mantz@googlemail.com</a>.
+
+<h1>License</h1>
+<a href=http://www.gnu.org/licenses/gpl.html>GPL version 2 or higher</a>
+<br /><br />
+<small>This application is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later version.
+<br /><br />
+This application is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+<br /><br />
+You should have received a copy of the GNU General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</small>
+<br /><br />
+Get the source code of the app here on <a href=https://github.com/demantz/RFAnalyzer>GitHub</a>!
+]]></string>
+    <string name="waiting_info">正在停止并重启RTL2832U驱动...</string>
+    <string name="error_with_source"  >源错误</string>
+    <string name="wrong_format">文件源：频率或采样率格式错误</string>
+    <string name="alert_dlg_title">未安装RTL2832U驱动！</string>
+    <string name="alert_dlg_msg">您需要安装（免费的）RTL2832U驱动以使用RTL-SDR。</string>
+    <string name="alert_dlg_pos_button">前往谷歌商店下载</string>
+    <string name="alert_dlg_neg_button">取消</string>
+    <string name="source_not_available">源不可用</string>
+    <string name="mbr_to_modulate">必须启动分析器才可以修改调制模式</string>
+    <string name="sel_demodulation_mode">选择解调模式：</string>
+    <string name="mbr_at_sample_rate">当前记录采样率与解调采样率不兼容！</string>
+    <string name="source_not_support">源不支持当前解调模式所需采样率</string>
+    <string name="tune_to_frequency">调整频率</string>
+    <string name="frequency_is">频率为 </string>
+    <string name="type_a_new_frequency">输入新频率 </string>
+    <string name="set">设置</string>
+    <string name="frequency_out_of_range">频率超出有效范围：</string>
+    <string name="adjust_gain_settings">调整增益设置</string>
+    <string name="not_support_gain_adjust"> 不支持增益调整！</string>
+    <string name="mbr_to_record">必须启动分析器才可以开始记录</string>
+    <string name="start_recording">开始记录</string>
+    <string name="record">记录</string>
+    <string name="frequency_is_invalid">频率无效！</string>
+    <string name="recording_stopped">记录停止：</string>
+    <string name="recording_is_running">警告：已经启动记录！</string>
+    <string name="on">确定</string>
+    <string name="select_a_file">选择文件（8比特复数IQ采样）</string>
+    <string name="no_file_browser">未安装文件浏览器！</string>
+    <string name="no_text_viewer">未安装文本查看器！</string>
+    <string name="cant_resolve">文件地址无法解析：</string>
+    <string name="bookmarks">书签</string>
+    <string name="create_a_category">请首先创建一个类别！</string>
+    <string name="cant_tune_to_bm_freq">无法调至书签频率！请检查源是否运行并支持该频率。</string>
+    <string name="delete_category">删除类别</string>
+    <string name="category_contains">类别包含的 </string>
+    <string name="bms_be_deleted"> 个书签也将被删除！</string>
+    <string name="bookmarks_editBookmark">编辑书签</string>
+    <string name="add">新建</string>
+    <string name="save">保存</string>
+    <string name="specify_center_freq">请指定中心频率！</string>
+    <string name="specify_center_bw">请指定带宽！</string>
+    <string name="new_category">新类别</string>
+    <string name="this_is_new_cat">这是一个新类别！</string>
+    <string name="bookmarks_editCategory">编辑类别</string>
+</resources>
