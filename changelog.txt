@@ -1,5 +1,8 @@
 CHANGELOG - RF Analyzer
 
+version 1.14
+xxx
+
 version 1.13
  - Bookmark frequencies
  - Including hackrf_android 1.12 (support for rad1o)
