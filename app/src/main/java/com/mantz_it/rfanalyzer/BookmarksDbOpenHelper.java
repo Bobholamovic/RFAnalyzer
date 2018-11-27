@@ -65,19 +65,11 @@ public class BookmarksDbOpenHelper extends SQLiteOpenHelper {
 	}
 
 	private void populateExampleBookmarks(SQLiteDatabase db) {
-<<<<<<< HEAD
 		// db.execSQL("INSERT INTO bookmarkCategories (categoryName, description) VALUES ('FM Stations', 'FM radio stations');");
 		// db.execSQL("INSERT INTO bookmarkCategories (categoryName, description) VALUES ('Favorites', 'My favorite stations');");
 		//db.execSQL("INSERT INTO bookmarkCategories (categoryName, description) VALUES ('category3', 'Just for testing');");
 
 		// db.execSQL("INSERT INTO bookmarks (name, comment, categoryID, frequency, channelWidth, mode, squelch) VALUES ('DasDing!', 'German radio station', 1, 90800000, 100000, 3, -50);");
-=======
-		db.execSQL("INSERT INTO bookmarkCategories (categoryName, description) VALUES ('FM Stations', 'FM radio stations');");
-		db.execSQL("INSERT INTO bookmarkCategories (categoryName, description) VALUES ('Favorites', 'My favorite stations');");
-		//db.execSQL("INSERT INTO bookmarkCategories (categoryName, description) VALUES ('category3', 'Just for testing');");
-
-		db.execSQL("INSERT INTO bookmarks (name, comment, categoryID, frequency, channelWidth, mode, squelch) VALUES ('DasDing!', 'German radio station', 1, 90800000, 100000, 3, -50);");
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 		//db.execSQL("INSERT INTO bookmarks (name, comment, categoryID, frequency, channelWidth, mode, squelch) VALUES ('bookmark1', 'Just for testing1', 3, 10012301, 10000, 2, -60);");
 		//db.execSQL("INSERT INTO bookmarks (name, comment, categoryID, frequency, channelWidth, mode, squelch) VALUES ('bookmark2', 'Just for testing2', 3, 10012302, 10000, 1, -50);");
 		//db.execSQL("INSERT INTO bookmarks (name, comment, categoryID, frequency, channelWidth, mode, squelch) VALUES ('bookmark3', 'Just for testing3', 3, 10012303, 10000, 2, -40);");

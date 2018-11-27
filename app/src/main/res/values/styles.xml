@@ -3,7 +3,6 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-<<<<<<< HEAD
         <item name="android:windowNoTitle">true</item>
         <item name="colorPrimary">#0f8e3f</item>
         <item name="colorPrimaryDark">#0f8e3f</item>
@@ -12,8 +11,3 @@
     </style>
 
 </resources>
-=======
-    </style>
-
-</resources>
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27

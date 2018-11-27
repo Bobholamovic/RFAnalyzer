@@ -2,11 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-<<<<<<< HEAD
     buildToolsVersion '27.0.3'
-=======
-    buildToolsVersion "23.0.3"
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 
     defaultConfig {
         applicationId "com.mantz_it.rfanalyzer"
@@ -27,8 +23,5 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':hackrf_android')
     compile 'com.android.support:appcompat-v7:23.3.0'
-<<<<<<< HEAD
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-=======
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 }

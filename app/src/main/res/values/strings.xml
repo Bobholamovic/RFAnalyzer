@@ -262,7 +262,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</sm
 <br /><br />
 Get the source code of the app here on <a href=https://github.com/demantz/RFAnalyzer>GitHub</a>!
 ]]></string>
-<<<<<<< HEAD
     <string name="waiting_info">Stopping and restarting RTL2832U driver...</string>
     <string name="error_with_source"  >Error with Source</string>
     <string name="wrong_format">File Source: Wrong format of frequency or sample rate</string>
@@ -307,7 +306,4 @@ Get the source code of the app here on <a href=https://github.com/demantz/RFAnal
     <string name="new_category">-new category-</string>
     <string name="this_is_new_cat">This is a new category!</string>
     <string name="bookmarks_editCategory">Edit Category</string>
-=======
-
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 </resources>

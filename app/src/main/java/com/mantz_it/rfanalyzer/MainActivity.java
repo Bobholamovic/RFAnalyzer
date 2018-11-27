@@ -2,10 +2,7 @@ package com.mantz_it.rfanalyzer;
 
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
-<<<<<<< HEAD
 import android.content.Context;
-=======
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -76,10 +73,6 @@ import java.util.Locale;
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 public class MainActivity extends AppCompatActivity implements IQSourceInterface.Callback, RFControlInterface {
-<<<<<<< HEAD
-=======
-
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 	private MenuItem mi_startStop = null;
 	private MenuItem mi_demodulationMode = null;
 	private MenuItem mi_record = null;
@@ -196,11 +189,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 				running = false;
 
 				// Just inform the user about what is going on (why does this take so long? ...)
-<<<<<<< HEAD
 				Toast.makeText(MainActivity.this,getString(R.string.waiting_info),Toast.LENGTH_SHORT).show();
-=======
-				Toast.makeText(MainActivity.this,"Stopping and restarting RTL2832U driver...",Toast.LENGTH_SHORT).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 
 				// 2) Delayed start of the Analyzer:
 				Thread timer = new Thread() {
@@ -482,11 +471,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 							+ (detailedDescription != null ? ": " + detailedDescription + " (" + exceptionCode + ")" : ""));
 
 					if (source != null && source instanceof RtlsdrSource) {
-<<<<<<< HEAD
 						Toast.makeText(MainActivity.this, getString(R.string.error_with_source)+ "[" + source.getName() + "]: " + errorMsg + " (" + errorId + ")"
-=======
-						Toast.makeText(MainActivity.this, "Error with Source [" + source.getName() + "]: " + errorMsg + " (" + errorId + ")"
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 								+ (detailedDescription != null ? ": " + detailedDescription + " (" + exceptionCode + ")" : ""), Toast.LENGTH_LONG).show();
 						source.close();
 					}
@@ -531,11 +516,8 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 		this.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-<<<<<<< HEAD
+
 				Toast.makeText(MainActivity.this, getString(R.string.error_with_source) + "[" + source.getName() + "]: " + message, Toast.LENGTH_LONG).show();
-=======
-				Toast.makeText(MainActivity.this, "Error with Source [" + source.getName() + "]: " + message, Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 			}
 		});
 		stopAnalyzer();
@@ -676,11 +658,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 							this.runOnUiThread(new Runnable() {
 								@Override
 								public void run() {
-<<<<<<< HEAD
 									Toast.makeText(MainActivity.this, getString(R.string.wrong_format), Toast.LENGTH_LONG).show();
-=======
-									Toast.makeText(MainActivity.this, "File Source: Wrong format of frequency or sample rate", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 								}
 							});
 							return false;
@@ -787,25 +765,15 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 
 							// Show a dialog that links to the play market:
 							new AlertDialog.Builder(this)
-<<<<<<< HEAD
 									.setTitle(getString(R.string.alert_dlg_title))
 									.setMessage(getString(R.string.alert_dlg_msg))
 									.setPositiveButton(getString(R.string.alert_dlg_pos_button), new DialogInterface.OnClickListener() {
-=======
-									.setTitle("RTL2832U driver not installed!")
-									.setMessage("You need to install the (free) RTL2832U driver to use RTL-SDR dongles.")
-									.setPositiveButton("Install from Google Play", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 										public void onClick(DialogInterface dialog, int whichButton) {
 											Intent marketIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=marto.rtl_tcp_andro"));
 											startActivity(marketIntent);
 										}
 									})
-<<<<<<< HEAD
 									.setNegativeButton(getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-									.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 										public void onClick(DialogInterface dialog, int whichButton) {
 											// do nothing
 										}
@@ -910,11 +878,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 		// check if the source is open. if not, open it!
 		if(!source.isOpen()) {
 			if (!openSource()) {
-<<<<<<< HEAD
 				Toast.makeText(MainActivity.this, getString(R.string.source_not_available) + "(" + source.getName() + ")", Toast.LENGTH_LONG).show();
-=======
-				Toast.makeText(MainActivity.this, "Source not available (" + source.getName() + ")", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 				running = false;
 				return;
 			}
@@ -965,20 +929,12 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 	 */
 	private void showDemodulationDialog() {
 		if(scheduler == null || demodulator == null || source == null) {
-<<<<<<< HEAD
 			Toast.makeText(MainActivity.this, getString(R.string.mbr_to_modulate), Toast.LENGTH_LONG).show();
-=======
-			Toast.makeText(MainActivity.this, "Analyzer must be running to change modulation mode", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 			return;
 		}
 
 		new AlertDialog.Builder(this)
-<<<<<<< HEAD
 				.setTitle(getString(R.string.sel_demodulation_mode))
-=======
-				.setTitle("Select a demodulation mode:")
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 				.setSingleChoiceItems(R.array.demodulation_modes, demodulator.getDemodulationMode(), new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						setDemodulationMode(which);
@@ -1011,11 +967,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
-<<<<<<< HEAD
 						Toast.makeText(MainActivity.this, getString(R.string.mbr_at_sample_rate), Toast.LENGTH_LONG).show();
-=======
-						Toast.makeText(MainActivity.this, "Recording is running at incompatible sample rate for demodulation!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 					}
 				});
 				return;
@@ -1027,11 +979,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 			// Verify that the source supports the sample rate:
 			if(source.getSampleRate() != Demodulator.INPUT_RATE) {
 				Log.e(LOGTAG,"setDemodulationMode: cannot adjust source sample rate!");
-<<<<<<< HEAD
 				Toast.makeText(MainActivity.this,  getString(R.string.source_not_support) + "(" +
-=======
-				Toast.makeText(MainActivity.this, "Source does not support the sample rate necessary for demodulation (" +
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						Demodulator.INPUT_RATE/1000000 + " Msps)", Toast.LENGTH_LONG).show();
 				scheduler.setDemodulationActivated(false);
 				mode = Demodulator.DEMODULATION_OFF;	// deactivate demodulation...
@@ -1099,17 +1047,10 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 		sp_bandwidthUnit.setSelection(preferences.getInt(getString(R.string.pref_tune_to_frequency_bandwidthUnit), 0));
 
 		new AlertDialog.Builder(this)
-<<<<<<< HEAD
 			.setTitle(getString(R.string.tune_to_frequency))
 			.setMessage(String.format(getString(R.string.frequency_is) + "%f MHz\n" + getString(R.string.type_a_new_frequency), source.getFrequency() / 1000000f))
 			.setView(ll_view)
 			.setPositiveButton(getString(R.string.set), new DialogInterface.OnClickListener() {
-=======
-			.setTitle("Tune to Frequency")
-			.setMessage(String.format("Frequency is %f MHz. Type a new Frequency: ", source.getFrequency() / 1000000f))
-			.setView(ll_view)
-			.setPositiveButton("Set", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 				public void onClick(DialogInterface dialog, int whichButton) {
 					try {
 						double newFreq = source.getFrequency();
@@ -1146,22 +1087,14 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 							edit.apply();
 
 						} else {
-<<<<<<< HEAD
 							Toast.makeText(MainActivity.this, getString(R.string.frequency_out_of_range) + (long)newFreq + " Hz", Toast.LENGTH_LONG).show();
-=======
-							Toast.makeText(MainActivity.this, "Frequency is out of the valid range: " + (long)newFreq + " Hz", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						}
 					} catch (NumberFormatException e) {
 						Log.e(LOGTAG, "tuneToFrequency: Error while setting frequency: " + e.getMessage());
 					}
 				}
 			})
-<<<<<<< HEAD
 			.setNegativeButton(getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-			.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 				public void onClick(DialogInterface dialog, int whichButton) {
 					// do nothing
 				}
@@ -1225,15 +1158,9 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 
 				// Show dialog:
 				AlertDialog hackrfDialog = new AlertDialog.Builder(this)
-<<<<<<< HEAD
 						.setTitle(getString(R.string.adjust_gain_settings))
 						.setView(view_hackrf)
 						.setPositiveButton(getString(R.string.set), new DialogInterface.OnClickListener() {
-=======
-						.setTitle("Adjust Gain Settings")
-						.setView(view_hackrf)
-						.setPositiveButton("Set", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 							public void onClick(DialogInterface dialog, int whichButton) {
 								// safe preferences:
 								SharedPreferences.Editor edit = preferences.edit();
@@ -1242,11 +1169,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 								edit.apply();
 							}
 						})
-<<<<<<< HEAD
 						.setNegativeButton(getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-						.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 							public void onClick(DialogInterface dialog, int whichButton) {
 								// do nothing
 							}
@@ -1271,11 +1194,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 				final int[] possibleGainValues = ((RtlsdrSource)source).getPossibleGainValues();
 				final int[] possibleIFGainValues = ((RtlsdrSource)source).getPossibleIFGainValues();
 				if(possibleGainValues.length <= 1 && possibleIFGainValues.length <= 1) {
-<<<<<<< HEAD
 					Toast.makeText(MainActivity.this, source.getName() + getString(R.string.not_support_gain_adjust), Toast.LENGTH_LONG).show();
-=======
-					Toast.makeText(MainActivity.this, source.getName() + " does not support gain adjustment!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 				}
 				// Prepare layout:
 				final LinearLayout view_rtlsdr = (LinearLayout) this.getLayoutInflater().inflate(R.layout.rtlsdr_gain, null);
@@ -1381,15 +1300,9 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 
 				// Show dialog:
 				AlertDialog rtlsdrDialog = new AlertDialog.Builder(this)
-<<<<<<< HEAD
 						.setTitle(getString(R.string.adjust_gain_settings))
 						.setView(view_rtlsdr)
 						.setPositiveButton(getString(R.string.set), new DialogInterface.OnClickListener() {
-=======
-						.setTitle("Adjust Gain Settings")
-						.setView(view_rtlsdr)
-						.setPositiveButton("Set", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 							public void onClick(DialogInterface dialog, int whichButton) {
 								// safe preferences:
 								SharedPreferences.Editor edit = preferences.edit();
@@ -1400,11 +1313,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 								edit.apply();
 							}
 						})
-<<<<<<< HEAD
 						.setNegativeButton(getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-						.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 							public void onClick(DialogInterface dialog, int whichButton) {
 								// do nothing
 							}
@@ -1440,11 +1349,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 
 	public void showRecordingDialog() {
 		if(!running || scheduler == null || demodulator == null || source == null) {
-<<<<<<< HEAD
 			Toast.makeText(MainActivity.this, getString(R.string.mbr_to_record), Toast.LENGTH_LONG).show();
-=======
-			Toast.makeText(MainActivity.this, "Analyzer must be running to start recording", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 			return;
 		}
 
@@ -1544,15 +1449,9 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 
 		// Show dialog:
 		new AlertDialog.Builder(this)
-<<<<<<< HEAD
 				.setTitle(getString(R.string.start_recording))
 				.setView(view)
 				.setPositiveButton(getString(R.string.record), new DialogInterface.OnClickListener() {
-=======
-				.setTitle("Start recording")
-				.setView(view)
-				.setPositiveButton("Record", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 					public void onClick(DialogInterface dialog, int whichButton) {
 						String filename = et_filename.getText().toString();
 						final int stopAfterUnit = sp_stopAfter.getSelectedItemPosition();
@@ -1568,11 +1467,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 						if (freq <= source.getMaxFrequency() && freq >= source.getMinFrequency())
 							source.setFrequency((long)freq);
 						else {
-<<<<<<< HEAD
 							Toast.makeText(MainActivity.this, getString(R.string.frequency_is_invalid), Toast.LENGTH_LONG).show();
-=======
-							Toast.makeText(MainActivity.this, "Frequency is invalid!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 							return;
 						}
 
@@ -1647,11 +1542,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 						}
 					}
 				})
-<<<<<<< HEAD
 				.setNegativeButton(getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 					public void onClick(DialogInterface dialog, int whichButton) {
 						// do nothing
 					}
@@ -1670,11 +1561,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 			runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
-<<<<<<< HEAD
 					Toast.makeText(MainActivity.this, getString(R.string.recording_stopped) + filename + " (" + filesize + " MB)", Toast.LENGTH_LONG).show();
-=======
-					Toast.makeText(MainActivity.this, "Recording stopped: " + filename + " (" + filesize + " MB)", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 				}
 			});
 			recordingFile = null;
@@ -1687,11 +1574,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 	public void showBookmarksDialog() {
 		// show warning toast if recording is running:
 		if(recordingFile != null)
-<<<<<<< HEAD
 			Toast.makeText(this, getString(R.string.recording_is_running), Toast.LENGTH_LONG).show();
-=======
-			Toast.makeText(this, "WARNING: Recording is running!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 		new BookmarksDialog(this, this);
 	}
 
@@ -1699,11 +1582,7 @@ public class MainActivity extends AppCompatActivity implements IQSourceInterface
 		AlertDialog dialog = new AlertDialog.Builder(this)
 				.setTitle(Html.fromHtml(getString(R.string.info_title, versionName)))
 				.setMessage(Html.fromHtml(getString(R.string.info_msg_body)))
-<<<<<<< HEAD
 				.setPositiveButton(getString(R.string.on), new DialogInterface.OnClickListener() {
-=======
-				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 					public void onClick(DialogInterface dialog, int whichButton) {
 						// Do nothing
 					}

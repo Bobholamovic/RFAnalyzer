@@ -94,11 +94,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
 				Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
 				intent.setType("*/*");
 				intent.addCategory(Intent.CATEGORY_OPENABLE);
-<<<<<<< HEAD
 				startActivityForResult(Intent.createChooser(intent, getString(R.string.select_a_file)), FILESOURCE_RESULT_CODE);
-=======
-				startActivityForResult(Intent.createChooser(intent, "Select a file (8-bit complex IQ samples)"), FILESOURCE_RESULT_CODE);
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 
 				// No error so far... let's dismiss the text input dialog:
 				Dialog dialog = ((EditTextPreference)preference).getDialog();
@@ -106,11 +102,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
 					dialog.dismiss();
 				return true;
 			} catch (ActivityNotFoundException e) {
-<<<<<<< HEAD
 				Toast.makeText(SettingsFragment.this.getActivity(), getString(R.string.no_file_browser), Toast.LENGTH_LONG).show();
-=======
-				Toast.makeText(SettingsFragment.this.getActivity(), "No file browser is installed!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 				// Note that there is still the text dialog visible for the user to input a file path... so no more error handling necessary
 			}
 			return false;
@@ -126,11 +118,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
 				this.startActivity(intent);
 				return true;
 			} catch (ActivityNotFoundException e) {
-<<<<<<< HEAD
 				Toast.makeText(SettingsFragment.this.getActivity(), getString(R.string.no_text_viewer), Toast.LENGTH_LONG).show();
-=======
-				Toast.makeText(SettingsFragment.this.getActivity(), "No text viewer is installed!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 			}
 			return false;
 		}
@@ -150,11 +138,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
 							updateFileSourcePrefs();
 						}
 						else {
-<<<<<<< HEAD
 							Toast.makeText(SettingsFragment.this.getActivity(), getString(R.string.cant_resolve) + uri.toString(), Toast.LENGTH_LONG).show();
-=======
-							Toast.makeText(SettingsFragment.this.getActivity(), "Can't resolve file path from: " + uri.toString(), Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						}
 					}
 					break;

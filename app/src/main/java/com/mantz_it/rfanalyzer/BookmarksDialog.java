@@ -97,15 +97,9 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 
 		// create and show dialog:
 		dialog = new AlertDialog.Builder(activity)
-<<<<<<< HEAD
 				.setTitle(activity.getString(R.string.bookmarks))
 				.setView(ll_root)
 				.setNegativeButton(activity.getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-				.setTitle("Bookmarks")
-				.setView(ll_root)
-				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						// do nothing
@@ -131,11 +125,7 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 			if(categoriesCursor.getCount() > 0)
 				new EditBookmarkDialog(activity, -1);
 			else
-<<<<<<< HEAD
 				Toast.makeText(activity, activity.getString(R.string.create_a_category), Toast.LENGTH_LONG).show();
-=======
-				Toast.makeText(activity, "Please create a category first!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 		}
 
 		else if(v == bt_addCategory) {
@@ -205,11 +195,7 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 			} else {
 				// Show error
 				Log.i(LOGTAG, "onItemClick(): Could not tune to bookmark frequency!");
-<<<<<<< HEAD
 				Toast.makeText(activity, activity.getString(R.string.cant_tune_to_bm_freq), Toast.LENGTH_LONG).show();
-=======
-				Toast.makeText(activity, "Cannot tune to bookmark frequency! Check that source is running and supports frequency.", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 
 				// Restore previous demodulation mode:
 				rfControlInterface.updateDemodulationMode(savedDemodulationMode);
@@ -258,15 +244,9 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 		if(cursor.getCount() > 0) {
 			// show confirmation dialog:
 			new AlertDialog.Builder(activity)
-<<<<<<< HEAD
 					.setTitle(activity.getString(R.string.delete_category))
 					.setMessage(activity.getString(R.string.category_contains)+ cursor.getCount() + activity.getString(R.string.bms_be_deleted))
 					.setPositiveButton(activity.getString(R.string.delete), new DialogInterface.OnClickListener() {
-=======
-					.setTitle("Delete Category")
-					.setMessage("Category contains " + cursor.getCount() + " Bookmarks that will be deleted too!")
-					.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							// Delete category (will cascade delete all contained bookmarks)
@@ -274,11 +254,7 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 							reloadCategories();
 						}
 					})
-<<<<<<< HEAD
 					.setNegativeButton(activity.getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-					.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							// do nothing
@@ -425,25 +401,15 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 
 			// create and show dialog:
 			final AlertDialog d = new AlertDialog.Builder(activity)
-<<<<<<< HEAD
 					.setTitle(bookmarkID<0 ? activity.getString(R.string.bookmarks_addBookmark) : activity.getString(R.string.bookmarks_editBookmark) )
 					.setView(ll_root)
 					.setNegativeButton(activity.getString(R.string.alert_dlg_neg_button) , new DialogInterface.OnClickListener() {
-=======
-					.setTitle(bookmarkID<0 ? "Add Bookmark" : "Edit Bookmark")
-					.setView(ll_root)
-					.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							// do nothing
 						}
 					})
-<<<<<<< HEAD
 					.setPositiveButton(bookmarkID<0 ? activity.getString(R.string.add)  : activity.getString(R.string.save) , null) // set click listener later..
-=======
-					.setPositiveButton(bookmarkID<0 ? "Add" : "Save", null) // set click listener later..
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 					.create();
 			d.show();
 			d.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
@@ -455,11 +421,7 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 
 					// Parse frequency
 					if(et_frequency.getText().length() == 0) {
-<<<<<<< HEAD
 						Toast.makeText(activity, activity.getString(R.string.specify_center_freq), Toast.LENGTH_LONG).show();
-=======
-						Toast.makeText(activity, "Please specify a center frequency!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						return;
 					}
 					double frequency = Double.valueOf(et_frequency.getText().toString());
@@ -468,11 +430,7 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 
 					// Parse channel width
 					if(et_channelWidth.getText().length() == 0) {
-<<<<<<< HEAD
 						Toast.makeText(activity, activity.getString(R.string.specify_center_bw), Toast.LENGTH_LONG).show();
-=======
-						Toast.makeText(activity, "Please specify the channel width!", Toast.LENGTH_LONG).show();
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						return;
 					}
 					int channelWidth = Integer.valueOf(et_channelWidth.getText().toString());
@@ -522,36 +480,21 @@ public class BookmarksDialog implements View.OnClickListener, AdapterView.OnItem
 
 			// Otherwise fill the fields with default values:
 			else {
-<<<<<<< HEAD
 				et_name.setText(activity.getString(R.string.new_category));
 				et_description.setText(activity.getString(R.string.this_is_new_cat));
-=======
-				et_name.setText("-new category-");
-				et_description.setText("This is a new category!");
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 			}
 
 			// create and show dialog:
 			new AlertDialog.Builder(activity)
-<<<<<<< HEAD
 					.setTitle(categoryID<0 ? activity.getString(R.string.bookmarks_addCategory) : activity.getString(R.string.bookmarks_editCategory))
 					.setView(ll_root)
 					.setNegativeButton(activity.getString(R.string.alert_dlg_neg_button), new DialogInterface.OnClickListener() {
-=======
-					.setTitle(categoryID<0 ? "Add Category" : "Edit Category")
-					.setView(ll_root)
-					.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							// do nothing
 						}
 					})
-<<<<<<< HEAD
 					.setPositiveButton(categoryID<0 ? activity.getString(R.string.add) : activity.getString(R.string.save), new DialogInterface.OnClickListener() {
-=======
-					.setPositiveButton(categoryID<0 ? "Add" : "Save", new DialogInterface.OnClickListener() {
->>>>>>> 8f67fb746b720f172f791c7b52d4e58412eeaf27
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							String name = et_name.getText().toString();
